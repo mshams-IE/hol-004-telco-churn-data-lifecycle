@@ -8,13 +8,13 @@ permissions:
   contents: write
 jobs:
   deploy:
-    runs-on: goes-runners
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Deploy MkDocs to GitHub Pages
-        uses: goes/github-actions/actions/publish-mkdocs-action@main
+        uses: mshams-IE/github-actions/actions/publish-mkdocs-action@main
         with:
           mkdocs_directory: 'instructor/mkdocs/'
           requirements_file: 'requirements.txt'
